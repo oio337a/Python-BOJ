@@ -1,0 +1,4 @@
+A, I = map(int, input().split())
+
+print(type(A))
+# print((I - 1) * A + 1)
