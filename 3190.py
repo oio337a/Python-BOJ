@@ -1,49 +1,52 @@
-from collections import deque
+def Solution():
+    time = 0
+    snake_arr = []
+    direction = {0: (0, 1), 1: (1, 0), 2: (0, -1), 3: (-1, 0)}
+    dir = 0
+    nx, ny = 0, 0
+    board[0][0] = 2
+    snake_arr.append([0, 0])
+
+    while True:
+        time += 1
+        nx += direction[dir][0]
+        ny += direction[dir][1]
+        if not 0 <= nx < N or not 0 <= ny < N:
+            break
+
+        if board[nx][ny] == 1:
+            board[nx][ny] = 2
+            snake_arr.append([nx, ny])
+        elif board[nx][ny] == 0:
+            board[nx][ny] = 2
+            snake_arr.append([nx, ny])
+            del_x, del_y = snake_arr.pop(0)
+            board[del_x][del_y] = 0
+        elif board[nx][ny] == 2:
+            break
+
+        if len(snake_dir) != 0 and time == snake_dir[0][0]:
+            time, new_dir = snake_dir.pop(0)
+            if new_dir == 'L':
+                dir = (dir + 3) % 4
+            elif new_dir == 'D':
+                dir = (dir + 1) % 4
+
+    return time
 
 
-def change(d, c):
-    if c == "L":
-        d = (d - 1) % 4
-    else:
-        d = (d + 1) % 4
-    return d
+N = int(input())
 
+board = [[0 for i in range(N)] for j in range(N)]
 
-dy = [-1, 0, 1, 0]
-dx = [0, 1, 0, -1]
+k = int(input())
+apple_locs = []
+for _ in range(k):
+    x, y = map(int, input().split())
+    board[x-1][y-1] = 1
 
+l = int(input())
+snake_dir = list(map(lambda x: [int(x[0]), str(x[1])], [
+                 input().split() for _ in range(l)]))
 
-def start():
-    direction = 1
-    time = 1
-    y, x = 0, 0
-    visited = deque([[y, x]])
-    arr[y][x] = 2
-    while 1:
-        y, x = y + dy[direction], x + dx[direction]
-        if 0 <= y < N and 0 <= x < N and arr[y][x] != 2:
-            if not arr[y][x] == 1:
-                temp_y, temp_x = visited.popleft()
-                arr[temp_y][temp_x] = 0
-            arr[y][x] = 2
-            visited.append([y, x])
-            if time in times.keys():
-                direction = change(direction, times[time])
-            time += 1
-        else:
-            return time
-
-
-if __name__ == "__main__":
-    N = int(input())
-    K = int(input())
-    arr = [[0] * N for _ in range(N)]
-    for _ in range(K):
-        a, b = map(int, input().split())
-        arr[a - 1][b - 1] = 1
-    L = int(input())
-    times = {}
-    for i in range(L):
-        X, C = input().split()
-        times[int(X)] = C
-    print(start())
+print(Solution())
