@@ -1,6 +1,5 @@
 hour, minute = map(int, input().split())
 
-60 - 10 - 35
 if minute < 45:
     minute = 60 - (45-minute)
     hour -= 1

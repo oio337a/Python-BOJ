@@ -7,6 +7,7 @@ for _ in range(N):
 
 # li.reverse()
 cnt = 0
+# N = li[0]
 N = li[-1]
 for i in li[::-1]:
     print(i)
