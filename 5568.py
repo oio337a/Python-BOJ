@@ -1,22 +1,21 @@
-import sys
-import itertools
+# import sys
+# import itertools
 
 
-def d():
-    return int(sys.stdin.readline())
+# def d():
+#     return int(sys.stdin.readline())
 
 
-n = d()
-case = d()
-li = []
-for _ in range(n):
-    li.append(str(d()))
-comb = list(itertools.permutations(li, case))
-numbers = set(map(''.join, comb))
+# n = d()
+# case = d()
+# li = []
+# for _ in range(n):
+#     li.append(str(d()))
+# comb = list(itertools.permutations(li, case))
+# numbers = set(map(''.join, comb))
 
-print(len(numbers))
+# print(len(numbers))
 
-"""백트래킹으로 구현
 
 def dfs(depth):
     if depth == k:
@@ -26,9 +25,9 @@ def dfs(depth):
         if check[i]:
             continue
         li.append(nums[i])
+        print(li)
         check[i] = 1
-        print(check)
-        dfs(depth+1)
+        dfs(depth+1)  # return
         li.pop()
         check[i] = 0
 
@@ -36,7 +35,6 @@ def dfs(depth):
 n, k = int(input()), int(input())
 nums = [int(input()) for _ in range(n)]
 li, s = [], set()
-check = [0]*n
+check = [0]*n  # 4 [0,1,1,0]
 dfs(0)
 print(s)
-"""
