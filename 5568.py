@@ -25,9 +25,8 @@ def dfs(depth):
         if check[i]:
             continue
         li.append(nums[i])
-        print(li)
         check[i] = 1
-        dfs(depth+1)  # return
+        dfs(depth+1)
         li.pop()
         check[i] = 0
 
@@ -35,6 +34,6 @@ def dfs(depth):
 n, k = int(input()), int(input())
 nums = [int(input()) for _ in range(n)]
 li, s = [], set()
-check = [0]*n  # 4 [0,1,1,0]
+check = [0]*n
 dfs(0)
 print(s)

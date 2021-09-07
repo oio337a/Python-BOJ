@@ -5,8 +5,6 @@ li = []
 for _ in range(9):
     li.append(int(sys.stdin.readline().rstrip()))
 
-li.sort()
-
 seven = list(itertools.combinations(li, 7))
 
 answer = []

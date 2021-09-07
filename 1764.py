@@ -8,14 +8,15 @@ b = set()
 for _ in range(m):
     b.add(input())
 
-answer = sorted(list(a & b))
+print(type(a & b))
+answer = sorted(list(a & b))  # 교집합
 
 print(len(answer))
 for i in answer:
     print(i)
 
 """
-시간 초과 why>??
+시간 초과
 
 import sys
 
