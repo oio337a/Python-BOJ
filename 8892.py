@@ -9,6 +9,7 @@ for i in range(n):
     for j in range(a):
         palin.append(input())
         PLAG = True
+    # 순열로 푸는 방법
     word = list(permutations(palin, 2))
     c = []
     r = []
@@ -22,13 +23,7 @@ for i in range(n):
             PLAG = False
             break
 
-    # reverse = [i for i in word[::-1]]
-    # for i in range(len(word)):
-    #     if word[i] == reverse[i]:
-    #         answer.append(word)
-    #         PLAG = False
-    #         break
-
+    # 이중 반복문 사용하여 문자열 저장
     # for k in range(0, a):
     #     for q in range(0, a):
     #         if k == q:
