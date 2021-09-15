@@ -6,8 +6,8 @@ input = sys.stdin.readline
 n, m, b = map(int, input().split())
 pan = [list(map(int, input().split())) for i in range(n)]
 
-mini = min(map(min, pan))
-maxi = max(map(max, pan))
+mini = min(map(min, pan))  # 가장 낮은 층
+maxi = max(map(max, pan))  # 가장 높은 층
 t = 1e9
 
 for i in range(mini, maxi+1):
