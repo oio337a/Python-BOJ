@@ -13,7 +13,6 @@ for i in range(n-1, -1, -1):
             dp[i][j] = max(dp[i][j+1] + right[j], dp[i+1][j], dp[i+1][j+1])
         else:
             dp[i][j] = max(dp[i+1][j], dp[i+1][j+1])
-        print(dp, i)
 print(dp[0][0])
 
 """

@@ -7,7 +7,6 @@
 """
 
 import sys
-from collections import deque
 input = sys.stdin.readline
 
 n, k = map(int, input().split())
@@ -26,15 +25,12 @@ for i in range(1, len(li)):
 ans = 0
 for i in range(n):
     l, r = 0, i
-    print(i, 'i')
     while l <= r:
         mid = int((l+r)/2)
-        print(mid, 'mid')
         if mid == 0:
             cnt = check[i]
         else:
             cnt = check[i] - check[mid-1]
-        print(cnt, 'cnt')
         if cnt <= k:
             r = mid - 1
         else:
