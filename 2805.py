@@ -2,7 +2,9 @@ import sys
 input = sys.stdin.readline
 
 """
-길이가 5와 2 인 나무를 집에 들고간다.
+잘려진 나무를 가져간다.
+최대한 적게 자른다. 다른말로 최대한 높이 자른 것을 가져간다.
+
 """
 n, m = map(int, input().split())
 tree = list(map(int, input().split()))
@@ -11,7 +13,6 @@ start, end = 1, max(tree)
 
 while start <= end:
     mid = (start + end) // 2
-    print(mid)
     cut_tree = 0
     for i in tree:
         if i >= mid:
