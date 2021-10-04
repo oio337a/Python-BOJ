@@ -22,7 +22,4 @@ def solution(numbers):
                 answer.append(int(i))
 
     answer = len(set(answer))
-    return
-
-
-solution("1107")
+    return answer
