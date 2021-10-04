@@ -1,13 +1,13 @@
-from typing import Sized
-
 
 def solution(sizes):
+    answer = 0
 
+    sizes = [sorted(size, reverse=True) for size in sizes]
+
+    w = [size[0] for size in sizes]
+    h = [size[1] for size in sizes]
+
+    w, h = max(w), max(h)
+
+    answer = w * h
     return answer
-
-
-max_1 = sizes[0][0]
-max_2 = sizes[0][1]
-"""
-[[60, 50], [30, 70], [60, 30], [80, 40]]
-"""
