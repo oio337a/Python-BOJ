@@ -9,9 +9,9 @@ for _ in range(n):
 
     if len(temp) == 1:  # 커멘드만 입력 받았다면
         if temp[0] == 'all':
-            s = set([i for i in range(1, 21)])
+            li = set([i for i in range(1, 21)])
         else:
-            s = set()
+            li = set()
 
     else:
         co, num = temp[0], temp[1]

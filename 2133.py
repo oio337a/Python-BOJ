@@ -31,3 +31,10 @@ for i in range(4, n+1):
         dp[i] = dp[i-2] * 3 + sum(dp[:i-2]) * 2 + 2
 
 print(dp[n])
+
+
+"""
+n = 8
+
+dp[8] = dp[6] * 3
+"""
