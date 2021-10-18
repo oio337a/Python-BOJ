@@ -1,5 +1,5 @@
 import sys
-from itertools import combinations, permutations
+from itertools import combinations
 input = sys.stdin.readline
 
 """

@@ -1,5 +1,5 @@
 N = input().split('-')
-num = []
+num = []  # + 저장 될 리스트
 
 for i in N:
     cnt = 0
