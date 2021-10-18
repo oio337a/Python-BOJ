@@ -24,7 +24,6 @@ def check(y, x):
 
 
 def calculate(y, x):
-    global n
     result = 0
     for dy, dx in flower:
         ny = y + dy
