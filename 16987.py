@@ -24,7 +24,7 @@ def rec_egg(idx, eggs):
     if eggs[idx] > 0:
         for i in range(n):
             flag = False
-            if eggs[i] > 0 and i != idx:
+            if eggs[i] > 0 and i != idx:  # 손에 든걸 고르지않고 내구도가 있다면
                 flag = True
                 temp = eggs[:]
                 temp[i] -= w[idx]

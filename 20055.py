@@ -9,7 +9,7 @@ box = deque([0]*n)
 res = 0
 
 while 1:
-    li.rotate(1)
+    li.rotate(1)  # [1,2,3,4,5]  [5,1,2,3,4] [4,5,1,2,3]
     box.rotate(1)
     box[-1] = 0  # 박스가 떨어진다.
     if sum(box):
