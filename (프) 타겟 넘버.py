@@ -23,7 +23,6 @@ def solution(numbers, target):
 def dfs(numbers, target, d):
     answer = 0
     if d == len(numbers):
-        print(numbers)
         if sum(numbers) == target:
             return 1
         else:
