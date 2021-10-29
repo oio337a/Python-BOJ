@@ -19,3 +19,14 @@ for i in range(n - 1, -1, -1):
         dp[i] = max(dp[i+1], p[i] + dp[i+t[i]])
 
 print(dp[0])
+
+
+"""
+i   = 4
+
+dp[5], p[4] + dp[4 + t[4]]
+t[4] = 2
+0, 15 + dp[6]
+0, 15
+15
+"""

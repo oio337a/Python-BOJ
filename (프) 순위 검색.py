@@ -25,6 +25,9 @@ def solution(info, query):
 
     for q in query:                       # query의 모든 조건에 대해서
         qry = [i for i in q.split() if i != 'and']
+        print(qry, 1)
+        qry_1 = [i for i in q.split()]
+        print(qry_1, 2)
         qry_cnd = '/'.join(qry[:-1])
         qry_score = int(qry[-1])
         if qry_cnd in db:                 # 딕셔너리 내에 값이 존재한다면,
@@ -41,3 +44,10 @@ def solution(info, query):
             answer.append(0)
 
     return answer
+
+
+info = ["java backend junior pizza 150", "python frontend senior chicken 210", "python frontend senior chicken 150",
+        "cpp backend senior pizza 260", "java backend junior chicken 80", "python backend senior chicken 50"]
+query = ["java and backend and junior and pizza 100", "python and frontend and senior and chicken 200",
+         "cpp and - and senior and pizza 250", "- and backend and senior and - 150", "- and - and - and chicken 100", "- and - and - and - 150"]
+solution(info, query)

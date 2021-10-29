@@ -1,6 +1,6 @@
 def solution(n, times):
     answer = 0
-    left, right = 1, max(times) * n
+    left, right = 1, min(times) * n
 
     while (left <= right):
         mid = (left + right) // 2
@@ -20,4 +20,13 @@ def solution(n, times):
 """
 mid 시간 // 1명을 처리하는데 걸리는 시간 = 
 한명의 심사관이 mid시간 동안 처리하는 업무 수
+
+6  [ 7, 10 ]
+
+l  r   m
+1  60  30
+
+4 + 3
+7  n 
+
 """
