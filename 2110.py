@@ -35,5 +35,4 @@ while s <= e:  # s 와 e 가 같아질때까지 반복
     else:
         e = mid - 1
 
-
 print(result)
