@@ -55,6 +55,8 @@ for _ in range(n):
             print(remove(heap))
     else:
         insert(heap, num)
+# ---------------------------- #
+
 
 # import heapq
 # from sys import stdin
@@ -71,4 +73,4 @@ for _ in range(n):
 #         else:
 #             print(0)
 #     else:
-#         heapq.heappush(heap, [-num, num])
+#         heapq.heappush(heap, [-num, num]) # [우선순위, 저장할 숫자]
