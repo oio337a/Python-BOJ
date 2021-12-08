@@ -42,6 +42,7 @@ for i in range(n):
     print(answer[i])
 
 """
+수정
 import sys
 from itertools import permutations
 
