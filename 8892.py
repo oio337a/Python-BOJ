@@ -43,6 +43,7 @@ for i in range(n):
 
 """
 수정
+한번더
 import sys
 from itertools import permutations
 
