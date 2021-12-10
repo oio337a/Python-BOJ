@@ -6,7 +6,7 @@ kdi = [-1, 1, -2, -2, -1, 1, 2, 2]
 kdj = [-2, -2, -1, 1, 2, 2, -1, 1]
 
 
-def move_k(i, j):
+def move_k(i, j):  # 나이트 움직이기
     global t
     for a in range(8):
         ni, nj = i + kdi[a], j + kdj[a]
@@ -19,7 +19,7 @@ qdi = [-1, -1, -1, 0, 1, 1, 1, 0]
 qdj = [-1, 0, 1, 1, 1, 0, -1, -1]
 
 
-def move_q(i, j):
+def move_q(i, j):  # 퀸 움직이기
     global t
     for a in range(8):
         ni = i
@@ -30,7 +30,7 @@ def move_q(i, j):
                 if visited[ni][nj] == 0:
                     visited[ni][nj] = 1
                     t -= 1
-                elif visited[ni][nj] == 2:
+                elif visited[ni][nj] == 2:  # 말이 서있을 때
                     break
             else:
                 break
@@ -47,9 +47,9 @@ k = collections.deque()
 for i in range(3):
     s = collections.deque(input().split())
     for j in range(int(s.popleft())):
-        a = int(s.popleft()) - 1
+        a = int(s.popleft()) - 1  # 인덱스 맞추기
         b = int(s.popleft()) - 1
-        visited[a][b] = 2
+        visited[a][b] = 2  # 말 두기
         t -= 1
         if i == 0:
             q.append([a, b])

@@ -8,7 +8,7 @@ li = []
 
 for i in range(r):
     temp = ""
-    length = 0
+    length = 0  # 2개가 되면 단어로 인정 flag
     for j in range(c):
         if words[i][j] == '#':
             if length >= 2:
