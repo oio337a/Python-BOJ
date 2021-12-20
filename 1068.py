@@ -18,7 +18,7 @@ input = sys.stdin.readline
 
 def dfs(num, arr):
     arr[num] = -2
-    for i in range(len(arr)):
+    for i in range(len(arr)):  # 0 ~ 4
         if num == arr[i]:
             dfs(i, arr)
 

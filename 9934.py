@@ -12,8 +12,8 @@ def make_tree(arr, x):
     tree[x].append(arr[mid])
     if len(arr) == 1:
         return
-    make_tree(arr[:mid], x + 1)
-    make_tree(arr[mid+1:], x + 1)
+    make_tree(arr[:mid], x + 1)  # 왼쪽
+    make_tree(arr[mid+1:], x + 1)  # 오른쪽
 
 
 make_tree(li, 0)
