@@ -8,7 +8,9 @@ s(1) = moo + mooo + moo
 
 s(k) = 2 * s(k - 1) + k + 3
 
+s(k) = s(L)
 '''
+import sys
 s0 = ['m', 'o', 'o']
 
 
@@ -16,7 +18,7 @@ def sol(n, k, l):  # n : 찾을 글자, k : 차수, l : 이전 차수의 길이
     new_l = 2*l + k + 3
     if n <= 3:
         print(s0[n-1])
-        exit(0)
+        sys.exit(0)
     if new_l < n:     # n 이 new_l 클 경우 (new_l 안에 n 을 포함 할 때 까지 재귀)
         sol(n, k+1, new_l)
     else:       # new_l 안에 n 이 포함되는 경우
@@ -25,7 +27,7 @@ def sol(n, k, l):  # n : 찾을 글자, k : 차수, l : 이전 차수의 길이
                 print('o')
             else:
                 print('m')
-            exit(0)
+            sys.exit(0)
         else:
             # n - (l + k + 3)을 진행해서 다시 첫번째 파트로 돌아온 다음
             # 처음부터 다시 재귀
