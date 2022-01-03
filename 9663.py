@@ -13,9 +13,10 @@ def dfs(x):
 
     if x == n:
         result += 1
+        return
     else:
         for i in range(n):
-            board[x] == i
+            board[x] = i
             if check_queen(x):
                 dfs(x + 1)
 
