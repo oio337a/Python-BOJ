@@ -4,7 +4,7 @@ input = sys.stdin.readline
 
 N, K = map(int, input().split())
 jewelery = [list(map(int, input().split())) for _ in range(N)]
-bag = [int(input().split()) for _ in range(K)]
+bag = [int(input()) for _ in range(K)]
 jewelery.sort()
 bag.sort()
 
