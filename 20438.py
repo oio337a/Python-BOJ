@@ -2,15 +2,15 @@
 1 2 3 4 5 6 7 8 9 10
 
 3 4 5 6 7 8 9 10 11 12
-x     x     x        x
-    x         x
-        x
+x     x     x        x (3번)
+    x         x         (5번)
+        x               (7번)
   x       x      x
         x
     
     (누적합)
 
-구간 학생 수 - (누적합[구간 마지막값] - 누적합[구간 시작값])
+구간 학생 수(그 구간의 총 학생 수) - (누적합[구간 마지막값] - 누적합[구간 시작값]) 그 구간의 학생 수를 알수 있습니다.
 '''
 
 
@@ -30,11 +30,10 @@ for i in map(int, input().split()):
         if not sleep[j]:
             check_code[j] = 1
 
-prefix = [check_code[0]]
+prefix = [check_code[0]]  # 선누적합
 for i in range(1, N+3):
     prefix.append(prefix[-1] + check_code[i])
     # 각 학생번호 i 까지 출석한 학생들의 합
-
 for _ in range(M):
     s, e = map(int, input().split())
     print(e-s+1 - (prefix[e] - prefix[s-1]))

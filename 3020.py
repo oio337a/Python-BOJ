@@ -1,3 +1,13 @@
+'''
+
+h = 1 
+i = 2 종유석의 높이
+
+
+h - i + 1
+밑에서 봣을때 종유석이 닿는 구간을 구하는 공식이 
+'''
+
 import sys
 input = sys.stdin.readline
 
@@ -26,4 +36,5 @@ for i in range(1, h + 1):
     elif min_break == (suksoon[i] + jongyousuk[h - i + 1]):
         min_cnt += 1
 
-# print(min_break, min_cnt)
+
+print(min_break, min_cnt)
