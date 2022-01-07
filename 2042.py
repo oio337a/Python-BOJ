@@ -11,10 +11,8 @@ def init(start, end, node):  # 세그먼트 트리 만들기
     tree[node] = init(start, mid, node * 2) + init(mid + 1, end, node * 2 + 1)
     return tree[node]
 
-# 구간합 구하기
 
-
-def summit(start, end, node, left, right):
+def summit(start, end, node, left, right):  # 구간합 구하기
     # left 와 right가 범위에서 벗어났기 때문에 return
     if left > end or right < start:
         return 0
@@ -25,10 +23,8 @@ def summit(start, end, node, left, right):
     mid = (start + end) // 2
     return summit(start, mid, node * 2, left, right) + summit(mid + 1, end, node * 2 + 1, left, right)
 
-# 인덱스 값 바꾸기
 
-
-def update(start, end, node, index, diff):
+def update(start, end, node, index, diff):  # 인덱스 값 바꾸기
     # index 범위 벗어 나면 return
     if index < start or index > end:
         return
