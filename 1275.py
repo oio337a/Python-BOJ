@@ -30,11 +30,10 @@ def update(start, end, node, index, diff):
     if index < start or index > end:
         return
     tree[node] += diff
-    if start == end:
-        return
-    mid = (start + end) // 2
-    update(start, mid, node * 2, index, diff)
-    update(mid + 1, end, node * 2 + 1, index, diff)
+    if not start == end:
+        mid = (start + end) // 2
+        update(start, mid, node * 2, index, diff)
+        update(mid + 1, end, node * 2 + 1, index, diff)
 
 
 n, q = map(int, input().split())
@@ -45,7 +44,9 @@ init(0, n - 1, 1)
 
 for _ in range(q):
     x, y, a, b = map(int, input().split())
+    if x > y:
+        x, y = y, x
     print(summit(0, n - 1, 1, x - 1, y - 1))
     diff = b - li[a - 1]
     li[a - 1] = b
-    update(0, n - 1, 1, a, diff)
+    update(0, n - 1, 1, a - 1, diff)
