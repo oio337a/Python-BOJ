@@ -11,6 +11,7 @@ v     v         v
 
 """
 import sys
+
 input = sys.stdin.readline
 
 n, c = map(int, input().split())
