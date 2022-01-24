@@ -3,7 +3,7 @@ from itertools import *
 
 # a 가 b보다 더 좋은 배치일 경우 true
 def cmp(a, b):
-    return a[::-1] > b[::-1]
+    return a[::-1] > b[::-1] # 배열 뒤집기
 
 
 def solution(n, info):
@@ -30,3 +30,4 @@ def solution(n, info):
     return ret[:-1]
 
 print((solution(5, [2,1,1,1,0,0,0,0,0,0,0])))
+
