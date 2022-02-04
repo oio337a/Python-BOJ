@@ -27,16 +27,13 @@
 # print(dist[n-1][m-1])
 
 
+
+# 다익스트라 풀이
 import sys
 from heapq import heappush, heappop
 In = lambda : sys.stdin.readline().rstrip()
 MIS = lambda : map(int, In().split())
-def makeMazeEx():
-    tr, tc = 0, 0
-    for i in range(R * C):
-        maze_ex[i] = (tr, tc)
-        tc = tc + 1 if tc < R - 1 else 0
-        tr = tr + 1 if tc == R - 1 else tr
+def numberingMaze():
     cnt=0
     for i in range(R):
         for j in range(C):
@@ -59,12 +56,12 @@ if __name__ == "__main__":
     maze=[[*map(int, list(In()))] for i in range(R)]
     maze_ex=[0]*(R*C)
     maze_num=[[0]*C for i in range(R)]
-    makeMazeEx()
+    numberingMaze()
     maze_two=[[] for i in range(R*C)]
     for r in range(R):
         for c in range(C):
             a=maze_num[r][c]
-            for nr, nc in [(r+1,c), (r,c+1)]:
+            for nr, nc in [(r-1, c), (r, c-1), (r+1,c), (r,c+1)]:
                 if 0<=nr<R and 0<=nc<C:
                     b=maze_num[nr][nc]
                     w = 1 if maze[nr][nc] == 1 else 0
