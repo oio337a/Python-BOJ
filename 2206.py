@@ -29,3 +29,4 @@ def bfs(x, y):
                 temp[x][y] = 0
                 visit[x][y] = 1
                 q.append([x, y])
+print(move_cnt)
