@@ -5,11 +5,13 @@ from collections import deque
 INF = int(1e9)
 N, M, K = map(int, input().split())
 graph = []
+
 for _ in range(N):
     graph.append(list(map(int, input())))
 visited = [[[INF]*(K+1) for _ in range(M)] for _ in range(N)]
 xpos = [1, -1, 0, 0]
 ypos = [0, 0, 1, -1]
+
 def bfs(stx, sty):
     q = deque()
     q.append((stx, sty, 0))
