@@ -1,6 +1,6 @@
-# import sys, copy
-# input = sys.stdin.readline
-#
+import sys, copy
+input = sys.stdin.readline
+
 # n = int(input())
 # li = list(map(int, input().split()))
 #
@@ -19,16 +19,17 @@ n = int(input())
 li = list(map(int, input().split()))
 answer = [False for _ in range(200_000)]
 
-s = [li[0]]
+s = [False for _ in range(200_000)]
+s[li[0]] = True
+
 answer[li[0]] = -1
 
 for i in range(n):
-    if li[i] in s:
+    if s[li[i]] == True:
         continue
     answer[li[i]] = li[i - 1]
-    s.append(li[i])
+    s[li[i]] = True
 
-cnt_s = len(s)
-
-print(cnt_s)
-print(answer[0:cnt_s])
+max_node = max(li) + 1
+print(max_node)
+print(*answer[0:max_node])
