@@ -9,7 +9,8 @@ for i in range(1, n+1):
 def find(u):
     if (u == parent[u]):
         return u
-    return parent[u] == find(parent[u])
+    parent[u] = find(parent[u])
+    return parent[u]
 
 # 해당 노드는 루트 노드를 찾기 위해 부모값을 통해서 Find함수를 호출한다.
 # 이동하며 모든 노드의 루트노드도 갱신한다.
