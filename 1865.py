@@ -27,12 +27,12 @@ for _ in range(tc):
 
     arr = [[] for _ in range(n + 1)]
     for _ in range(m):
-        s, e, t = map(int, input().split())
+        s, e, t = map(int, input().split())  # 시작, 끝, 시간
 
         arr[s].append((t, e))
         arr[e].append((t, s))
     for _ in range(w):
-        s, e, t = map(int, input().split())
+        s, e, t = map(int, input().split())  # 시작, 끝, 시간
 
         arr[s].append((-t, e))
 
