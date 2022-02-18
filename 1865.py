@@ -20,7 +20,7 @@ def bellman_ford():
             for w, v in arr[j]: #
                 if dist[v] > w + dist[j]:
                     dist[v] = w + dist[j]
-                    if i == n:
+                    if i == n: # 마지막 노드까지 갔는데 값이 갱신됬다면, 음의 싸이클이 있는 것이기 때문에
                         is_possible = False
 
 
