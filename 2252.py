@@ -3,7 +3,6 @@ from collections import deque
 input = sys.stdin.readline
 
 n, m = map(int, input().split())
-arr = []
 indegree = [0 for _ in range(32001)]
 graph = [[] for i in range(32001)]
 queue = deque()

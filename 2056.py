@@ -1,5 +1,6 @@
 # 작업
 # https://www.acmicpc.net/problem/2056
+
 import sys
 input = sys.stdin.readline
 
@@ -17,4 +18,4 @@ for i in range(1, n+1):
     for j in graph[i]:
         tmp = max(tmp, dp[j])
     dp[i] += tmp
-print(max(dp))
+print(max(dp)) # dp[-1]

@@ -12,7 +12,7 @@ for _ in range(m):
     cost[a-1][b-1] = 1
     cost[b-1][a-1] = 1
 
-# 플로이드-와샨 알고리즘
+# 플로이드-와샬 알고리즘
 for k in range(n):
     cost[k][k] = 0
     for i in range(n):
