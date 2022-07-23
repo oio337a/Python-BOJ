@@ -60,3 +60,6 @@ def solution(S):
 
 
 solution(n)
+
+
+# 매일 1일1커밋 하기 생활화!!
