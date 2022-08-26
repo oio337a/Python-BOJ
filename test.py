@@ -1,5 +1,5 @@
 # from collections import deque
-
+# DFS
 
 # def solution(board):
 #     n = len(board)
