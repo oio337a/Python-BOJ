@@ -65,5 +65,5 @@
 #                 board[j][k] += i[-1]
 # print(board)
 
-for i in range(2, 1):
-    print(i)
+# for i in range(2, 1):
+#    print(i)
