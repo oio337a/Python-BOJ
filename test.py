@@ -33,33 +33,43 @@
 # solution()
 
 
-n = "X.XXXXX.X."
+# n = "X.XXXXX.X."
 
 
-def solution(S):
-    enable_print = S % 10
-    while S > 0:
-        if enable_print >= 0:
-            enable_print = 1
-        if enable_print == 1:
-            print(S % 10, end="")
-        S = S // 10
+# def solution(S):
+#     enable_print = S % 10
+#     while S > 0:
+#         if enable_print >= 0:
+#             enable_print = 1
+#         if enable_print == 1:
+#             print(S % 10, end="")
+#         S = S // 10
 
 
-def solution(S):
-    cnt = 0
-    num = len(S) - 1
-    S = list(S)
-    while num >= 0:
-        if S[num] == "X":
-            cnt += 1
-            num -= 3
-        else:
-            num -= 1
-    print(cnt)
+# def solution(S):
+#     cnt = 0
+#     num = len(S) - 1
+#     S = list(S)
+#     while num >= 0:
+#         if S[num] == "X":
+#             cnt += 1
+#             num -= 3
+#         else:
+#             num -= 1
+#     print(cnt)
 
 
-solution(n)
+# solution(n)
 
 
-# 매일 1일1커밋 하기 생활화!!
+# # 매일 1일1커밋 하기 생활화!!
+
+nums = [0,1,0,3,12]
+
+count = nums.count(0)
+# nums[:] = [i for i in nums if i != 0]
+random = [i for i in nums if i != 0]
+nums = random
+nums += [0] * count
+
+print(nums)
