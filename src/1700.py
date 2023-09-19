@@ -1,4 +1,4 @@
-# 멀티탬 스케쥴링
+# 멀티탭 스케쥴링
 
 import sys
 input = sys.stdin.readline
