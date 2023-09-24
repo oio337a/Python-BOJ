@@ -36,12 +36,11 @@
 import sys
 input = sys.stdin.readline
 
-
 length, width, height = map(int, input().split())
 total = length * width * height
 N = int(input())
 cube = [tuple(map(int, input().split())) for _ in range(N)]
-cube.sort(reverse=True)
+cube.reverse()
 
 answer, total_now = 0, 0
 for c_idx, c_cnt in cube:
