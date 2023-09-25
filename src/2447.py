@@ -14,7 +14,7 @@ def counting_star(n):
     counting_star(a)  # 3
     for i in range(3):  # 0 1 2
         for j in range(3):  # 0 1 2
-            if i == 1 and j == 1:
+            if (i == 1 and j == 1) or (i == 0 and j == 0):
                 continue   # 가운데 영역 건너 뛰기
             for k in range(a):
                 board[a*i+k][a*j:a*(j+1)] = board[k][:a]
