@@ -19,7 +19,6 @@ def f(n):
   for i in range(3, n + 1):
     dp[i] = (dp[i - 2] + dp[i - 1])%10_007
   print(dp[n])
-
 if n == 1 or n == 2:
   print(n)
 else:
