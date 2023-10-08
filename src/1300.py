@@ -9,18 +9,6 @@
 4 4 8 12 16 20
 5 5 10 15 20 25
 """
-#
-# import sys
-# input = sys.stdin.readline
-#
-# n = int(input())
-# k = int(input())
-#
-# b = [i * j for i in range(1, n + 1) for j in range(1, n + 1)]
-#
-# b.sort()
-# print(b[k])
-
 n = int(input())
 k = int(input())
 
