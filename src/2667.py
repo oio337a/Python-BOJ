@@ -1,7 +1,9 @@
 # # 단지 번호 붙이기
 # # https://www.acmicpc.net/problem/2667
 
+import sys
 from collections import deque
+input = sys.stdin.readline
 
 dx = [0, 0, 1, -1]
 dy = [1, -1, 0, 0]
@@ -31,7 +33,7 @@ def bfs(board, a, b):
 n = int(input())
 board = []
 for i in range(n):
-    board.append(list(map(int, input())))
+    board.append(list(map(int, input().rstrip())))
 
 cnt = []
 for i in range(n):
