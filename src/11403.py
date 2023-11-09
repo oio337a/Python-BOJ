@@ -93,7 +93,6 @@ def dfs(x):
             visited[i] = 1
             dfs(i)
 
-visited = [0 for _ in range(n)]
 for i in range(n):
     dfs(i)
     for j in range(n):
