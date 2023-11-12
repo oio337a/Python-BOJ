@@ -13,7 +13,7 @@ def dfs(x):
   if visited[number]: #방문가능한 곳이 있는지
     if number in cycle: #사이클 가능 여부 확인
       result += cycle[cycle.index(number):] #사이클 되는 구간 부터만 팀을 이룸
-      return
+    return
   else:
     dfs(number)
 
