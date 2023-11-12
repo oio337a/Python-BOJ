@@ -2,7 +2,7 @@
 
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**5)
+sys.setrecursionlimit(10**6)
 
 def dfs(x):
   global result
