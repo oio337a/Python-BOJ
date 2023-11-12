@@ -6,7 +6,6 @@ input = sys.stdin.readline
 n, m, p = map(int, input().split())
 
 hateDic = {}
-visitDic = {}
 
 visit = [0 for _ in range(n)]
 board = []
