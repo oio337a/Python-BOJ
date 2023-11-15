@@ -4,7 +4,6 @@ import sys
 from collections import deque
 input = sys.stdin.readline
 
-''' 시간 초과 '''
 max_f, position, target, up, down = map(int, input().split())
 que = deque()
 que.append((position, 0))
