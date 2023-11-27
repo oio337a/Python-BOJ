@@ -6,7 +6,7 @@ input = sys.stdin.readline
 
 n = int(input())
 INF = int(1e9)
-dp = [[INF] * (1 << n) for _ in range(n)]
+dp = [[-1] * (1 << n) for _ in range(n)]
 
 def dfs(x, visited):
   if visited == (1 << n) - 1: # 모든 도시를 방문했다면
@@ -15,16 +15,17 @@ def dfs(x, visited):
     else:
       return INF
   
-  if dp[x][visited] != INF: # 이미 최소비용이 계산되어 있다면
+  if dp[x][visited] != -1: # 이미 최소비용이 계산되어 있다면
     return dp[x][visited]
-  
+  temp = INF
   for i in range(1, n): # 모든 도시를 탐방
     if not graph[x][i]: # 가는 경로가 업을 때
       continue
     if visited & (1 << i): # 이미 방문한 도시라면
       continue
     
-    dp[x][visited] = min(dp[x][visited], dfs(i, visited | (1 << i)) + graph[x][i])
+    temp = min(temp, dfs(i, visited | (1 << i)) + graph[x][i])
+  dp[x][visited] = temp
   return dp[x][visited]
 
 graph = []
