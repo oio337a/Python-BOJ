@@ -10,5 +10,5 @@ for _ in range(t):
   prefix = [0]
   
   for i in range(n):
-    prefix.append(prefix[-1] + x[i])
-  print(max(max(prefix), max(x)))
+    prefix.append(max(prefix[-1] + x[i], x[i]))
+  print(max(prefix[1:]))
