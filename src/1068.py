@@ -16,11 +16,11 @@ input = sys.stdin.readline
 """
 
 
-def dfs(num, arr):
+def dfs(num):
     arr[num] = -2
     for i in range(len(arr)):  # 0 ~ 4
         if num == arr[i]:
-            dfs(i, arr)
+            dfs(i)
 
 
 n = int(input())
@@ -28,7 +28,7 @@ arr = list(map(int, input().split()))
 k = int(input())
 count = 0
 
-dfs(k, arr)
+dfs(k)
 count = 0
 for i in range(len(arr)):
     if arr[i] != -2 and i not in arr:
