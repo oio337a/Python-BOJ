@@ -18,7 +18,7 @@ n = int(input())
 cost = [0] + [int(x) for x in input().split()]
 
 visited = [0 for _ in range(n + 1)]
-dp = [[0, cost[i]] * 2 for i in range(n + 1)]
+dp = [[0, cost[i]] for i in range(n + 1)]
 g = defaultdict(list)
 
 for _ in range(n - 1):
