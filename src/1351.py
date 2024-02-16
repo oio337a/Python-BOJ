@@ -12,10 +12,6 @@ def calculate_A(N, P, Q, memo):
         memo[N] = calculate_A(N // P, P, Q, memo) + calculate_A(N // Q, P, Q, memo)
         return memo[N]
 
-def find_AN(N, P, Q):
-    memo = {}
-    return calculate_A(N, P, Q, memo)
-
 # 예시 사용
 N, P, Q = map(int, input().split())
 memo = {}
